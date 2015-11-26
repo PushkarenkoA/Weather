@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Weather StoneHeap</string>
-    <string name="dd_mmm_yyyy">%1$s - %2$s - %3$s</string>
-    <string name="icon_url">http://openweathermap.org/img/w/%1$s.png</string>
-    <string name="city">Cherkasy</string>
-    <string name="weather_details">Weather details</string>
-    <string name="openweathermap_url"><![CDATA[http://api.openweathermap.org/data/2.5/forecast?q=Cherkassy,ua&mode=json&units=metric&appid=217c6b5d9651d1cea2412cf6f84002d7]]></string>
-</resources>
