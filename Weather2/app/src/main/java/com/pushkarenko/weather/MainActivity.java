@@ -1,5 +1,6 @@
 package com.pushkarenko.weather;
 
+import android.app.Service;
 import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,10 @@ public class MainActivity extends AppCompatActivity implements CallBackInterface
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+
+        if (ServiceNotification.state) {
+            startService(new Intent(this, ServiceNotification.class));
+        }
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.bar);
         setSupportActionBar(myToolbar);
