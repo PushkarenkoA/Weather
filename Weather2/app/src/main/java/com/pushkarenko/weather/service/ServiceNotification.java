@@ -1,4 +1,4 @@
-package com.pushkarenko.weather;
+package com.pushkarenko.weather.service;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -13,6 +13,9 @@ import android.os.IBinder;
 import android.util.Log;
 
 import java.util.concurrent.TimeUnit;
+
+import com.pushkarenko.weather.R;
+import com.pushkarenko.weather.activity.MainActivity;
 
 /**
  * Created by Андрей on 17.12.2015.
@@ -41,13 +44,13 @@ public class ServiceNotification extends Service {
         PendingIntent appPendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, appIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         builder
                 .setContentIntent(appPendingIntent)
-                .setSmallIcon(R.drawable.ic_thunder_icon)
-                .setLargeIcon(BitmapFactory.decodeResource(getApplicationContext().getResources(), R.mipmap.ic_launcher))
+                .setSmallIcon(R.mipmap.ic_stat_large_icons_large_weather_thunder)
+                .setLargeIcon(BitmapFactory.decodeResource(getApplicationContext().getResources(), R.mipmap.ic_stat_large_icons_large_weather_thunder))
                 .setTicker("Дступны новые обновления погоды")
                 .setWhen(System.currentTimeMillis()) // время уведомления - текущее
                 .setAutoCancel(true) // для автоматического закрытия
-                .setContentTitle("Sun&Rain")
-                .setContentText("Нажмите чтобы обновить информацию о погоде. Будет показано только 10 уведомлений.");
+                .setContentTitle("Weather")
+                .setContentText("Нажмите чтобы обновить информацию о погоде.");
 
         notification = builder.build();
         //notification.defaults = Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE;
@@ -56,9 +59,10 @@ public class ServiceNotification extends Service {
             public void run() {
                 for (int i = 1; i <= 10; i++) {
                     try {
-                        nm.notify(NOTIFICATION_ID, notification);
+
                         Log.d(TAG, "Notification = " + i);
-                        TimeUnit.SECONDS.sleep(10);
+                        Thread.sleep(10000);
+                        nm.notify(NOTIFICATION_ID, notification);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

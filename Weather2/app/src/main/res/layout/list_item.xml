@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="16dp"
-    android:background="@drawable/rect">
+    android:background="@color/background">
 
 
 
@@ -17,12 +17,13 @@
         android:padding="4dp"
         android:text="DD"
         android:textSize="24sp"
-        android:background="@drawable/rect2"/>
+        />
+
     <ImageView
         android:id="@+id/icon"
         android:layout_width="40dp"
         android:layout_height="60dp"
-        android:layout_weight="3"
+        android:layout_weight="1"
         android:padding="4dp" />
 
     <LinearLayout
@@ -92,16 +93,6 @@
         android:paddingLeft="4dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="t°(C):"
-        android:textSize="14sp"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp" />
-
-
-    <TextView
         android:id="@+id/temperature"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -109,7 +100,16 @@
         android:padding="4dp"
         android:text="CC"
         android:textSize="24sp"
-        android:background="@drawable/oval"/>
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="t°(C):"
+        android:textSize="14sp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp" />
 
 
 </LinearLayout>

@@ -1,12 +1,14 @@
-package com.pushkarenko.weather;
+package com.pushkarenko.weather.activity;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.pushkarenko.weather.fragment.DetailsFragment;
+import com.pushkarenko.weather.R;
 
 public class Details_Activity extends AppCompatActivity {
     static final String POSITION_SELECTED = "position";

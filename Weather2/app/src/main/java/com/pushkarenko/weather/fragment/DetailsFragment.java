@@ -1,4 +1,4 @@
-package com.pushkarenko.weather;
+package com.pushkarenko.weather.fragment;
 
 
 import android.os.Bundle;
@@ -10,17 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
+import com.pushkarenko.weather.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;

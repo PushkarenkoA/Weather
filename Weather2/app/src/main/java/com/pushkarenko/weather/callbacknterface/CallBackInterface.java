@@ -1,4 +1,4 @@
-package com.pushkarenko.weather;
+package com.pushkarenko.weather.callbacknterface;
 
 /**
  * Created by Маряна on 25.11.2015.

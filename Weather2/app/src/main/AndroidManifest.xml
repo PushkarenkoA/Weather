@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        <activity android:name=".activity.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,11 +17,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Details_Activity"
+            android:name=".activity.Details_Activity"
             android:label="@string/label_details_activity"
             android:theme="@style/AppTheme" >
         </activity>
-        <service android:name=".ServiceNotification"
+        <service android:name=".service.ServiceNotification"
             android:enabled="true"
             android:exported="false"></service>
     </application>
